@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Log4j2
 public class RabbitMQConsumer {
 
-    @RabbitListener(queues = {"${rabbitmq.queue.name}"})
+    @RabbitListener(queues = {"${rabbitmq.jsonqueue.name}"})
     public void consumeMessage(String message) {
         // Handle the received message here
         log.info(String.format("Received message -> %s", message));
